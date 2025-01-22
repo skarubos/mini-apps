@@ -1,0 +1,385 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  /* background-image: url("ourola01.jpg"); */
+  background: rgb(252,255,216);
+  background: radial-gradient(circle, rgba(252,255,216,1) 0%, rgba(183,164,115,1) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn {
+  cursor: pointer;
+  border-style: none;
+  box-shadow: 0px 3px 5px rgb(124, 124, 124);
+}
+
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0px 3px 5px rgb(164, 164, 164);
+}
+
+#dark-layer {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity:0.5;
+  z-index:2;
+}
+
+.container {
+  display: block;
+  max-width: 880px;
+  width: 100%;
+  height: auto;
+  padding: 30px 30px;
+  margin: 0 auto;
+}
+
+.link-wrapper {
+  position: relative;
+  float: left;
+  width: 220px;
+  height: 243px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.image-wrapper {
+  padding:10px 15px;
+  pointer-events: none;
+} 
+
+
+.image-wrapper:hover {
+  transition: all 0.3s;
+  padding:11px 15px 9px 15px;
+}
+
+
+.circular-image {
+  width: 190px;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background-color: white;
+ /* border: 5px solid rgba(183,164,115,0); */
+  box-shadow: 0px 2px 5px 4px rgba(183,164,115,0.5);
+  pointer-events: auto;
+}
+
+.circular-image:hover {
+  transition: all 0.3s;
+  box-shadow: 0px 1px 2px 3px rgba(183,164,115,0.9);
+/*  border: 5px solid rgba(183,164,115,0.8); */
+}
+
+.option-image {
+  background-color: rgba(183,164,115,0) !important;
+  opacity: 0.5;
+}
+
+.option-image:hover {
+  opacity: 0.8;
+}
+
+.circular-image img {
+  width: 100%;
+  pointer-events: all;
+}
+
+.caption {
+  width:100%;
+  color:white;
+  text-shadow: 1px 0px 3px rgb(0, 0, 0), -1px 0px 3px rgb(0, 0, 0);
+}
+
+.caption a {
+  color:white;
+}
+
+.dammy-link-wrapper {
+  display: none;
+}
+
+.scroll-btn {
+  display: block;
+  width: 96px;
+  height: 96px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.2;
+}
+
+.scroll-btn:hover {
+  transition: 200ms;
+  opacity: 0.5;
+}
+
+.to-top {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.to-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 30px 2%;
+  }
+  .link-wrapper {
+    width: 30%;
+    height: auto;
+    margin: 0 1%;
+    margin-bottom: 10px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    padding:0;
+    padding-top: 100%;
+    margin-bottom: 10px;
+  } 
+  
+  .image-wrapper:hover {
+    padding:0;
+    padding-top: 100%;
+  }
+  
+  .circular-image:hover {
+    border: none;
+  }
+
+  .circular-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .caption {
+    line-height: 20px;
+    height: 40px;
+  }
+
+  .dammy-link-wrapper {
+    display: block !important;
+    width: 800px;
+    height: 180px;
+    margin: 0px auto;
+    opacity: 0;
+  }
+  
+  .scroll-btn {
+    display: none;
+  }
+
+}
+
+
+/* add_bookmark.php ------------------------------------------------ */
+.popup-window {
+  width: 782px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px black;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.popup-wrapper {
+  padding-bottom: 90px;
+  margin: 70px 200px;
+}
+
+.popup-txt {
+  padding-top: 17px;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.popup-txt span {
+  font-size: 12px;
+}
+
+.popup-input {
+  border: 1px solid rgb(158, 158, 158);
+  height: 25px;
+  width: 220px;
+  font-size: 14px;
+  padding-inline-start: 10px;
+  background-color: #f3f3f3;
+}
+
+.popup-input:hover {
+  border: 1px solid rgb(28, 96, 117);
+  background-color: #ffffff;
+}
+
+#image-input {
+  display: block;
+  padding-left: 80px;
+}
+
+#image-caution {
+  width: 200px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.popup-btn {
+  height: 45px;
+  line-height: 45px;
+  border-radius: 8px;
+  color: white;
+  background-color: #3783ff;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+#return-btn {
+  float: left;
+  width: 80px;
+  color: rgb(94, 94, 94);
+  background-color: #e1e1e1;
+  font-size: 18px;
+  margin-left: 40px;
+}
+
+#submit-btn {
+  float: right;
+  width: 180px;
+  letter-spacing: 12px;
+  padding-left: 12px;
+  margin-right: 40px;
+}
+
+
+
+/* index_edit.php ------------------------------------------------ */
+.button-wrapper-top {
+  margin: 20px 0 50px 0;
+}
+
+.button-wrapper-bottom {
+  margin: 20px 0 150px 0;
+}
+
+.dammy-btn {
+  width: 100%;
+  opacity: 0;
+}
+.menu-btn {
+  display: inline-block;
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.completion-button {
+  color: white;
+  background-color: #3783ff;
+  margin-left: 45px;
+}
+
+.home-button {
+  color: rgb(94, 94, 94);
+  background-color: #e1e1e1;
+  margin-left: 10px;
+}
+
+.modify-btn {
+  position: absolute;
+  top: 0px;
+  height: 35px;
+  width: 35px;
+  padding: 6px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.modify-btn:hover {
+  opacity: 1;
+}
+
+.modify-btn img {
+  width: 100%;
+}
+
+.delete-btn {
+  right: 15px;
+}
+
+.edit-btn {
+  left: 15px;
+}
+
+#delete-popup {
+  height: 300px;
+  width: 410px;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px black;
+  border-radius: 15px;
+  z-index: 11;
+}
+
+.popup-txt-wrapper {
+  margin-top: 45px;
+}
+
+.delete-button {
+  width: 120px;
+  background-color: rgb(255, 80, 80);
+}
+
+.return-button {
+  float: left;
+  width: 100px;
+  color: rgb(94, 94, 94);
+  background-color: #e1e1e1;
+  font-size: 18px;
+  margin-left: 80px;
+}
+

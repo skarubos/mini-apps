@@ -1,0 +1,335 @@
+/* reset ================================ */
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 100%;
+    font-family: 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #f6faff;
+    color: #6c7686;
+  }
+  
+  ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    color: #2d3133;
+    font-size: 14px;
+  }
+  
+  a:hover {
+    transition: all 0.3s ease;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  h1 {
+    font-weight: 600;
+  }
+  
+  input {
+    font-family: inherit;
+    font-size: 100%;
+  }
+
+  
+  /* container ================================ */
+  .container {
+    width: 90%;
+    min-width: 360px;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .container-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  
+  .container-header .new-button {
+    float:right;
+    background: #80bcff;
+    border-radius: 30px;
+    font-size: 14px;
+    width: 120px;
+    height: 45px;
+    line-height: 43px;
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid #80bcff;
+  }
+  .container-header .new-button:hover {
+    background-color: #ffffff;
+    color: #80bcff;
+    transition: all 0.3s ease;
+  }
+  
+  .cancel-button {
+    margin-top: 16px;
+    margin-left: 2px;
+    font-weight: 600;
+    color: #bac6d3;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  
+  .cancel-button:hover {
+    color: #80bcff;
+  }
+  
+  .container-header h1 {
+    font-size: 24px;
+  }
+
+  /* index ================================ */
+  .hidden {
+    display: none !important;
+  }
+
+  .table-head {
+    display: flex;
+    background-color: #b7cadc;
+    border-radius: 2px 2px 0 0;
+    height: 44px;
+    font-size: 16px;
+    line-height: 46px;
+    color: #ffffff;
+    padding-left:20px;
+  }
+  
+  .id-column {
+    width: 72px;
+    text-align: center;
+  }
+  
+  .table-body {
+    background-color: #ffffff;
+  }
+  
+  .table-body li {
+    height: 72px;
+    border: 1px solid #f0f4f9;
+    border-top: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .table-body .id-column {
+    font-size: 16px;
+    color: #bac6d3;
+  }
+  
+  .table-body .name-column {
+    font-size: 20px;
+    font-weight: 500;
+    color: #3f4651;
+    text-align: center;
+  }
+  
+  .item-data {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .name-txt {
+    font-size: 25px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .date-txt {
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .item-menu {
+    position: relative;
+    display: flex;
+    z-index: 10;
+  }
+  
+  .item-menu form {
+    position: relative;
+    display:block;
+    height: 72px;
+    width: 72px;
+  }
+  
+  .item-menu form input {
+    position:absolute;
+    top:0px;
+    left: 0px;
+    display:block;
+    height: 72px;
+    width: 72px;
+    font-size: 16px;
+    color: #bac6d3;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+  }
+  
+  .item-menu form input:hover {
+    color: #ff7f8c;
+    transition: all 0.3s ease;
+  }
+
+  .item-menu img {
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width: 72px;
+    display:flex;
+  }
+
+  .item-menu input:hover + .icon-shopping {
+    opacity: 0.5;
+  }
+
+  .icon-pen {
+    padding:25px;
+    filter: invert(26%) sepia(94%) saturate(1208%) hue-rotate(201deg) brightness(100%) contrast(90%);
+    opacity: 0.3;
+  }
+
+  .icon-shopping {
+    padding:20px;
+    filter: invert(61%) sepia(20%) saturate(1347%) hue-rotate(89deg) brightness(95%) contrast(84%);
+    opacity: 0.5;
+  }
+  
+  .item-menu a {
+    display: block;
+    height: 72px;
+    width: 72px;
+    font-size: 16px;
+    color: #bac6d3;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .item-menu a:hover + .icon-pen {
+    opacity: 0.5;
+  }
+
+  /* new, edit ================================ */
+  .item-form-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #f0f4f9;
+    border-radius: 0px 0px 2px 2px;
+    padding: 32px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    color: #8491a5;
+  }
+  
+  .item-form-wrapper input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    padding: 12px 16px;
+    background-color: #fcfcfd;
+    border: 1px solid #bac6d3;
+    border-radius: 2px;
+    color: #2b546a;
+    font-size: 18px;
+  }
+  
+  .item-form-wrapper input[type="submit"] {
+    display: block;
+    width: 120px;
+    height: 45px;
+    margin-top: 24px;
+    margin-left: auto;
+    border-radius: 30px;
+    font-size: 14px;
+    background-color: #80bcff;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #80bcff;
+  }
+  
+  .item-form-wrapper input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #80bcff;
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container-header {
+      display: none;
+    }
+
+    .item-edit {
+      display: none;
+    }
+
+    .long-txt {
+      letter-spacing: -1px;
+    }
+
+    .longest-txt {
+      letter-spacing: -1px;
+      font-size: 20px;
+    }
+    .icon-shopping {
+      padding: 15px;
+    }
+
+    .new-button-circle {
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      display: block;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 50px;
+      text-align: center;
+      color: white;
+      background-color: #427cbd;
+      cursor: pointer;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0.6;
+    }
+
+    .new-button-circle:hover {
+      opacity: 1;
+    }
+
+    .dammy-bottom {
+      height: 300px;
+    }
+  }

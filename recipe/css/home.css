@@ -1,0 +1,260 @@
+body {
+  color: #1baea7;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#edit-caption {
+  margin: 50px auto;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#search-wrapper {
+  width: 85%;
+  margin: 50px auto 0px;
+  padding: 15px 0px;
+}
+
+input[type="text"] {
+  width: 68%;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  padding: 2px 12px 0px;
+  border-radius: 13px;
+  border: 0.5px solid #00A6CA; 
+}
+
+.search-btn {
+  width: 28%;
+  margin-left: 2%;
+  font-size: 18px;
+  background-color: #00A6CA;
+}
+
+.search-result-text {
+  text-align: center;
+  margin: 30px auto;
+  color: #aaa;
+}
+
+#recipe-items {
+  width: 90%;
+  margin: 10px 5% 100px;
+}
+
+.recipe-item {
+  position: relative;
+  padding: 8px 0px;
+  border-bottom: 1px solid #42c7c1;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-img {
+  float: left;
+  width: 25%;
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+.text-wrapper {
+  float: right;
+  width: 80%;
+  padding: 5px 10px;
+}
+
+.recipe-neme {
+  color: #1baea7;
+  padding: 0px 0px 8px 5px;
+}
+
+.recipe-type {
+  float: left;
+  height: 24px;
+  margin: 0px 5px;
+}
+
+.material-wrapper {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  padding: 0px 12px;
+  margin: 0px 5px 4px;
+  color: white;
+  background-color: #4ac0b9;
+}
+
+
+/* メニューのCSS */
+input[name="delete[]"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0%;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 3px solid rgb(0 0 0 / 80%);
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px 2px rgba(0 0 0 / 50%);
+}
+
+input[name="delete[]"]:checked {
+  background-image: url(../images/checked-64.png);
+  background-size: cover;
+}
+
+.popup-button-wrapper {
+  margin: 20px auto 5px;
+}
+
+.delete-button {
+  width: 40% !important;
+  background-color: rgb(189, 34, 34) !important;
+  margin-left: 12px;
+}
+
+#popup-return-button {
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 13px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  text-indent: 0.5em;
+  vertical-align: middle;
+  width: 30%;
+  background-color: #ddd;
+  color: #4b4b4b;
+  letter-spacing: 0.1em;
+}
+
+#edit-wrapper {
+  position: fixed;
+  text-align: center;
+  bottom: -5px;
+  width: 100%;
+  height: 85px;
+  background-color: #333;
+  padding-top: 9px;
+  border-radius: 15px 15px 0px 0px;
+  border-top: 0.5px solid #aaa;
+  box-shadow: 0px -1px 2px 1px rgba(0, 0, 0, 0.4); 
+}
+#edit-caption {
+  display: inline-block;
+  width: 220px;
+  margin: 10px 2% 0px 0%;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #DFEFEE;
+}
+#confirm-button {
+  display: inline-block;
+  width: 45%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px 10px 0px 0px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: rgb(189, 34, 34);
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3); 
+  cursor: pointer;
+}
+#cancel-button {
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.0em;
+  text-align: center;
+  background-color: #ddd;
+  color: #333;
+  border-radius: 7px;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3); 
+  cursor: pointer;
+}
+
+
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  display: inline-block;
+	position: relative;
+	cursor: pointer;
+  width: 50px;
+  height:50px;
+	border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;/*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+	background: #fff;
+}
+
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+  width: 35%;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+  width: 20%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 30%;
+}
+
+
+/* PC用 */
+@media (min-width: 835px) {
+  #edit-wrapper {
+    width: 69%;
+  }
+}

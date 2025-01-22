@@ -1,0 +1,217 @@
+/* 共通のCSS */
+* {
+    box-sizing: border-box;
+  }
+  
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div, button,a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Lato, 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.05em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input[type="text"], textarea {
+  font-family: 'open sans';
+  font-size: 1.1em;
+  padding: 2px 12px 0px;
+  border: 0.3px solid #c9e1e7; 
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+input[type="text"] {
+  vertical-align: middle;
+  height: 35px;
+  line-height: 35px;
+}
+textarea {
+  line-height: 1.1em;
+  padding-top: 5px;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 13px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  vertical-align: middle;
+}
+
+#dark-layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+  margin: auto 10%;
+  padding: 40px 15px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* メニューのCSS */
+#contents{
+  min-height: 100%;
+}
+.menu {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100%;
+  background-color: #333;
+  color: #DFEFEE;
+  transition: left 0.3s ease-in-out;
+}
+.menu-wrapper {
+  width: 85%;
+  margin: auto;
+  padding-top: 90px;
+}
+.menu-headline-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0px;
+}
+.menu-headline {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.menu ul {
+  list-style-type: none;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 12px 0px 12px 19%;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.menu-text {
+  display: block !important;
+  padding: 12px 0px !important;
+}
+.menu-type-image {
+  width: 30px;
+  margin-right: 7px;
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/close.png');
+  background-size: contain;
+  opacity: 0.6;
+} 
+
+
+/* スマートフォン用 */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* タブレット用 */
+@media (min-width: 601px) and (max-width: 834px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* PC用 */
+@media (min-width: 835px) {
+  body {
+    font-size: 14px;
+  }
+
+  button[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  .menu {
+    left: 0%;
+    width: 22%;
+  }
+  .menu-wrapper {
+    padding-top: 35px;
+  }
+  .close-button {
+    display: none;
+  }
+  .menu li {
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  .menu li:hover {
+    background-color: #34484d; 
+    transition: background-color 0.5s;
+  }
+  .menu-headline-wrapper {
+    padding: 15px 0px 5px;
+  }
+  .menu-headline-wrapper:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+
+  .popup {
+    width: 50%;
+    margin: auto 25%;
+  }
+
+  #main-container {
+    width: 78%;
+    padding: 10px 5%;
+    margin-left: 22%;
+  }
+}
