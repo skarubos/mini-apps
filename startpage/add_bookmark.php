@@ -4,7 +4,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['hidden-id'])) {
   //「編集」の処理
   // Connect to MySQL database
-  require_once("connect.php");
+  require_once("../connect.php");
   $mysqli = new mysqli($host, $username, $password, $dbname);
 
   // Get file details
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['hidden-id'])) {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
   //「新規作成」の処理
   // Connect to MySQL database
-  require_once("connect.php");
+  require_once("../connect.php");
 
   // Get file details
   $fileName = $_FILES['image']['name'];
