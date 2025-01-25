@@ -1,5 +1,5 @@
 <?php
-  require_once('php/mySQL.php');
+  require_once('../connect.php');
   require_once('php/get_folders.php');
 
   $cssLinks = array("common", "folder");

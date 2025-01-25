@@ -3,7 +3,7 @@ $yyyy = $_GET['year'];
 $mm = $_GET['month'];
 $dd = $_GET['date'];
 
-require_once('mySQL.php');
+require_once('../connect.php');
 
 // 【気象庁のデータを取得】
 $data = array();

@@ -3,7 +3,11 @@
 $allowedExt = array("jpg", "jpeg", "png");
 
 require_once('../../connect.php');
-getParams('recipe');
+// テーブル名
+$tablename = 'main';
+// 画像の保存先
+$dirImage = '../images/';
+$dirImageFull = '../images/full/';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // フォームデータを取得

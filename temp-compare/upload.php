@@ -1,5 +1,5 @@
 <?php
-require_once('mySQL.php');
+require_once('../connect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {

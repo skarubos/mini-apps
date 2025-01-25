@@ -3,7 +3,8 @@
     $newestDate = "データなし";
     $condition = false;
 
-    require_once('mySQL.php');
+    require_once('../connect.php');
+    $tablename = 'sb_test';
 
     // テーブルが存在するかどうかをチェック
     $sql = "SHOW TABLES LIKE '$tablename'";

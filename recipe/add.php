@@ -1,6 +1,6 @@
 <?php
 
-require_once('php/mySQL.php');
+require_once('../connect.php');
 
 // 修正の場合、元のデータを読み込み
 $inputs = array();

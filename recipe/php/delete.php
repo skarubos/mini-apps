@@ -7,7 +7,12 @@ function delete_file($file_path) {
 
 function delete_recipe($id) {
     require_once('../../connect.php');
-    getParams('recipe');
+    // テーブル名
+    $tablename = 'main';
+    // 画像の保存先
+    $dirImage = '../images/';
+    $dirImageFull = '../images/full/';
+
     // 画像・Full画像・テーブルの名前を取得する
     $sql = "SELECT img_name, img_full, table_name FROM $tablename WHERE id='$id'";
     $result = mysqli_query($conn, $sql);

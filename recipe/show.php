@@ -4,7 +4,7 @@ $table = $_GET['table'];
 $recipe_name = $_GET['name'];
 $image_name = $_GET['image'];
 
-require_once('php/mySQL.php');
+require_once('../connect.php');
 
 // クエリを実行して結果セットを取得
 $sql = "SELECT material, amount, step FROM $table";
