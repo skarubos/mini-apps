@@ -1,0 +1,50 @@
+*{
+    text-decoration:none;
+}
+body{
+    background-color:rgba(21, 21, 21, 1);
+    color:rgba(203, 203, 203, 1);
+}
+p{
+    margin-block-start:10px;
+    margin-block-end:10px;
+}
+#region{
+    display:block;
+    width:90%;
+    padding:1% 5%;
+    height:auto;
+}
+a.linkbutton,a.linkbuttonsp{
+    display:inline-block;
+    width:auto;
+    min-width:30px;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding-top:14px;
+    padding-bottom:14px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:10px;
+    color:rgba(80,75,40,1.0);
+    font-weight:bolder;
+    text-align:center;
+}
+.bing{
+    background-color:rgb(186, 166, 69);
+}
+.rakuten{
+    background-color:rgb(155, 107, 107);
+}
+a.linkbutton:visited{
+    background-color:rgb(230,230,230);
+    color:rgba(180,180,180);
+}
+a.linkbuttonsp{
+    background-color:rgba(100,150,200,0.5);
+    color:rgba(30,50,65);
+}
+a.linkbuttonsp:visited{
+    background-color:rgba(62, 99, 135, 0.5);
+    color:rgb(138, 171, 203);
+}

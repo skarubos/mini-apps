@@ -1,3 +1,7 @@
+<?php 
+require_once('load.php');
+?>
+
 <html>
     <head>
         <title>Rewards Automation</title>
@@ -7,7 +11,7 @@
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta property="og:type" content="article">
         <meta property="og:title" content="MS Rewards(Bing Search)">
-        <meta property="og:description" content="Microsoft Rewards/Bing Search Automation">
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
         <div id="region">
@@ -34,7 +38,34 @@
             <p>※ブラウザとその設定によっては開かない場合があります（ポップアップを許可=ブロック解除すれば動作する場合があります）。</p><br>
         </div>
         <button id="openTab">新しいタブを開いて5秒後に閉じる</button>
+
     <script>
+        document.getElementById('openTab').addEventListener('click', function() {
+            const newTab = window.open('https://example.com', '_blank');
+            if (newTab) {
+                setTimeout(() => {
+                    newTab.close();
+                }, 5000);
+            }
+        });
+        // window.addEventListener('load', function() {
+        //     // 2秒後に新しいタブを開く
+        //     setTimeout(function() {
+        //         const url = "https://www.google.com/search?q=test"; // 開きたいURL
+        //         const newTab = window.open(url, '_blank');
+
+        //         // タブが正常に開けた場合のみ閉じる処理をセット
+        //         if (newTab) {
+        //             setTimeout(function() {
+        //                 newTab.close();
+        //             }, 5000); // 5000ミリ秒 = 5秒後に閉じる
+        //         } else {
+        //             console.warn("新しいタブを開けませんでした（ポップアップブロックの可能性）");
+        //         }
+        //     }, 2000); // 2000ミリ秒 = 2秒後に開く
+        // });
+
+
         // 指定ミリ秒待機
         function Sleep(wait) {
             var start = new Date();
@@ -62,64 +93,7 @@
                 tab.close();
             }, waitingTime * unit + 10000);
         }
-
-        document.getElementById('openTab').addEventListener('click', function() {
-            const newTab = window.open('https://example.com', '_blank');
-            if (newTab) {
-                setTimeout(() => {
-                    newTab.close();
-                }, 5000);
-            }
-        });
     </script>
 
-    <style>
-        *{
-            text-decoration:none;
-        }
-        p{
-            margin-block-start:10px;
-            margin-block-end:10px;
-        }
-        #region{
-            display:block;
-            width:90%;
-            padding:1% 5%;
-            height:auto;
-        }
-        a.linkbutton,a.linkbuttonsp{
-            display:inline-block;
-            width:auto;
-            min-width:30px;
-            margin-right:20px;
-            margin-bottom:20px;
-            padding-top:14px;
-            padding-bottom:14px;
-            padding-left:10px;
-            padding-right:10px;
-            border-radius:10px;
-            color:rgba(80,75,40,1.0);
-            font-weight:bolder;
-            text-align:center;
-        }
-        .bing{
-            background-color:rgba(240,220,120,1.0);
-        }
-        .rakuten{
-            background-color:rgba(241,166,166,1.0);
-        }
-        a.linkbutton:visited{
-            background-color:rgb(230,230,230);
-            color:rgba(180,180,180);
-        }
-        a.linkbuttonsp{
-            background-color:rgba(100,150,200,0.5);
-            color:rgba(30,50,65);
-        }
-        a.linkbuttonsp:visited{
-            background-color:rgba(100,150,200,0.5);
-            color:rgba(60,90,120);
-        }
-    </style>
 </body>
 </html>

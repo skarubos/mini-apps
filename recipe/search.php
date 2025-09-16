@@ -4,7 +4,7 @@ $query = $_POST['query'];
 
 require_once('../connect.php');
 
-$sql = "SELECT id, name, img_name, mat1, mat2, mat3, mat4, mat5, mat6, type, url, img_full, table_name FROM $tablename
+$sql = "SELECT id, name, img_name, mat1, mat2, mat3, mat4, mat5, mat6, type, url, img_full, table_name FROM main
         WHERE `name` LIKE '%$query%' OR `mat1` LIKE '%$query%' OR `mat2` LIKE '%$query%' OR `mat3` LIKE '%$query%' OR `mat4` LIKE '%$query%' OR `mat5` LIKE '%$query%' OR `mat6` LIKE '%$query%'";
 $result = mysqli_query($conn, $sql);
 if (!$result) {
